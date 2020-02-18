@@ -6,15 +6,25 @@
 
 body {
   width: 100%;
-  height: 100vh;
-  background: linear-gradient(100deg, #F2F3F7 49.9%, #262626 50%);
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  background: linear-gradient(100deg, #F2F3F7 49.9%, #262626 50%);
+  transition: all 300ms ease;
+}
+
+@media(max-width: 675px) {
+  body {
+    min-height: 1200px;
+    flex-direction: column;
+    background: linear-gradient(180deg, #F2F3F7 50%, #262626 50%);
+  }
 }
 
 .container {
   width: 250px;
+  min-width: 250px;
   height: 0;
   display: flex;
   flex-direction: row;
