@@ -1,0 +1,107 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(100deg, #F2F3F7 49.9%, #262626 50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  width: 250px;
+  height: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  border-radius: 30px;
+  margin: 0 50px;
+  overflow: hidden;
+  animation: showContainer 1s;
+  animation-delay: .5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes showContainer {
+  from { height: 0 }
+  to { height: 500px }
+}
+
+#light-container {
+  box-shadow: -2px -2px 8px rgba(255, 255, 255, 1),
+              -2px -2px 12px rgba(255, 255, 255, 0.5),
+              inset 2px 2px 4px rgba(255, 255, 255, 0.1),
+              2px 2px 8px rgba(0, 0, 0, 0.15);
+  transform: translateY(-50px);
+}
+
+#dark-container {
+  box-shadow: #000000 4px 4px 8px, 
+              #4D4D4D -4px -4px 8px;
+  transform: translateY(50px);
+}
+
+.container .button {
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 150px;
+  margin: 15px;
+  cursor: pointer;
+  transition: all 400ms ease;
+}
+
+#light-container .button {
+  box-shadow: -2px -2px 8px rgba(255, 255, 255, 1),
+              -2px -2px 12px rgba(255, 255, 255, 0.5),
+              inset 2px 2px 4px rgba(255, 255, 255, 0.1),
+              2px 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+#dark-container .button {
+  box-shadow: #000000 2px 2px 8px, 
+              #4d4d4d -2px -2px 8px;
+}
+
+#light-container .button.active {
+  box-shadow: inset -2px -2px 8px rgba(255, 255, 255, 1),
+						  inset -2px -2px 12px rgba(255, 255, 255, 0.5),
+						  inset 2px 2px 4px rgba(255, 255, 255, 0.1),
+						  inset 2px 2px 8px rgba(0, 0, 0, 0.15);  
+  transform: scale(0.95);
+}
+
+#dark-container .button.active {
+  box-shadow: inset #000000 2px 2px 8px, 
+              inset#4d4d4d -2px -2px 8px;
+  transform: scale(0.95);
+}
+
+.container .button i {
+  color: #D1D2DA;
+  font-size: 30px;
+  transition: all 300ms ease;
+}
+
+.container .button.active i {
+  font-size: 28px;
+}
+
+#light-container .button.active i {
+  color: #35E135;
+  text-shadow: 0 0 10px #37FF37;
+}
+
+#dark-container .button.active i {
+  color: #00A8FF;
+  text-shadow: 0 0 10px #15B3FF;
+}

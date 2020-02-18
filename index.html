@@ -1,0 +1,74 @@
+<!doctype HTML>
+<head>
+  <title>Painel de Botões - Neumorfismo</title>
+
+  <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="style.css"/>
+</head>
+<body>
+  <main id="light-container" class="container">
+    <div id="wifi-light-button" class="button" onclick="changeButtonState(this.id)">
+      <i class="fa fa-wifi" aria-hidden="true"></i>
+    </div>
+    <div id="bluetooth-light-button" class="button" onclick="changeButtonState(this.id)">
+      <i class="fa fa-bluetooth-b" aria-hidden="true"></i>
+    </div>
+    <div id="bell-light-button" class="button" onclick="changeButtonState(this.id)">
+      <i class="fa fa-bell" aria-hidden="true"></i>
+    </div>
+    <div id="bolt-light-button" class="button" onclick="changeButtonState(this.id)">
+      <i class="fa fa-bolt" aria-hidden="true"></i>
+    </div>
+    <div id="phone-light-button" class="button" onclick="changeButtonState(this.id)">
+      <i class="fa fa-phone" aria-hidden="true"></i>
+    </div>
+    <div id="volume-light-button" class="button" onclick="changeButtonState(this.id)">
+      <i class="fa fa-volume-up" aria-hidden="true"></i>
+    </div>
+    <div id="plane-light-button" class="button" onclick="changeButtonState(this.id)">
+      <i class="fa fa-plane" aria-hidden="true"></i>
+    </div>
+    <div id="share-light-button" class="button" onclick="changeButtonState(this.id)">
+      <i class="fa fa-share-alt" aria-hidden="true"></i>
+    </div>
+    <div id="eye-light-button" class="button" onclick="changeButtonState(this.id)">
+      <i class="fa fa-eye" aria-hidden="true"></i>
+    </div>
+  </main>
+
+  <main id="dark-container" class="container">
+    <div id="wifi-dark-button" class="button" onclick="changeButtonState(this.id)">
+      <i class="fa fa-wifi" aria-hidden="true"></i>
+    </div>
+    <div id="bluetooth-dark-button" class="button" onclick="changeButtonState(this.id)">
+      <i class="fa fa-bluetooth-b" aria-hidden="true"></i>
+    </div>
+    <div id="bell-dark-button" class="button" onclick="changeButtonState(this.id)">
+      <i class="fa fa-bell" aria-hidden="true"></i>
+    </div>
+    <div id="bolt-dark-button" class="button" onclick="changeButtonState(this.id)">
+      <i class="fa fa-bolt" aria-hidden="true"></i>
+    </div>
+    <div id="phone-dark-button" class="button" onclick="changeButtonState(this.id)">
+      <i class="fa fa-phone" aria-hidden="true"></i>
+    </div>
+    <div id="volume-dark-button" class="button" onclick="changeButtonState(this.id)">
+      <i class="fa fa-volume-up" aria-hidden="true"></i>
+    </div>
+    <div id="plane-dark-button" class="button" onclick="changeButtonState(this.id)">
+      <i class="fa fa-plane" aria-hidden="true"></i>
+    </div>
+    <div id="share-dark-button" class="button" onclick="changeButtonState(this.id)">
+      <i class="fa fa-share-alt" aria-hidden="true"></i>
+    </div>
+    <div id="eye-dark-button" class="button" onclick="changeButtonState(this.id)">
+      <i class="fa fa-eye" aria-hidden="true"></i>
+    </div>
+  </main>
+
+  <script type="text/javascript">
+    changeButtonState = function(idButton) {
+      document.querySelector("#" + idButton).classList.toggle('active');
+    }
+  </script>
+</body>
